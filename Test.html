@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maryam | Graphic Designer</title>
+
+<meta name="description"
+content="Maryam - Graphic Designer | Poster, Social Media & Visual Design">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Tahoma, sans-serif;
+    background: #111111;
+    color: #f5eee6;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --black: #111111;
+    --dark: #171717;
+    --cream: #f5eee6;
+    --soft: #cfc4ba;
+    --red: #9e2939;
+    --red-light: #c94b5a;
+    --border: rgba(245,238,230,0.12);
+}
+
+/* =========================
+   SCROLL BAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--red);
+    border-radius: 20px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 7%;
+    background: rgba(17,17,17,0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1300px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--red-light);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: var(--soft);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 150px 7% 80px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: var(--red);
+    filter: blur(180px);
+    opacity: 0.16;
+
+    left: -200px;
+    top: 100px;
+}
+
+.hero-content {
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.small-title {
+    color: var(--red-light);
+    font-size: 15px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: 1;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+
+.hero h1 span {
+    color: var(--red-light);
+}
+
+.hero h2 {
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--soft);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 600px;
+    color: #aaa;
+    margin-bottom: 35px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 27px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--red);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--red-light);
+    transform: translateY(-4px);
+}
+
+.btn-outline {
+    border: 1px solid var(--border);
+    color: var(--cream);
+}
+
+.btn-outline:hover {
+    border-color: var(--red-light);
+    transform: translateY(-4px);
+}
+
+/* Hero visual */
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.design-card {
+    width: 330px;
+    height: 430px;
+
+    border: 1px solid var(--border);
+    background: linear-gradient(145deg,#202020,#111);
+
+    position: relative;
+    transform: rotate(4deg);
+
+    box-shadow: 30px 30px 80px rgba(0,0,0,0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.5s;
+}
+
+.design-card:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+.design-card::before {
+    content: "DESIGN";
+    position: absolute;
+    font-size: 80px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.03);
+}
+
+.design-card-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.design-card-content .symbol {
+    font-size: 80px;
+    color: var(--red-light);
+}
+
+.design-card-content h3 {
+    font-size: 35px;
+}
+
+.design-card-content p {
+    color: #888;
+}
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+section {
+    padding: 110px 7%;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.section-head {
+    margin-bottom: 55px;
+}
+
+.section-number {
+    color: var(--red-light);
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.section-title {
+    font-size: clamp(35px,5vw,60px);
+    margin-top: 8px;
+}
+
+.section-description {
+    color: #999;
+    max-width: 600px;
+    margin-top: 15px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: var(--dark);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-photo {
+    height: 450px;
+    background: #222;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+}
+
+.about-photo span {
+    color: #555;
+    font-size: 70px;
+}
+
+.about-text h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+.about-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    border: 1px solid var(--border);
+    padding: 8px 15px;
+    color: var(--soft);
+    font-size: 13px;
+}
+
+/* =========================
+   WORKS
+========================= */
+
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: #aaa;
+    padding: 9px 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--red);
+    border-color: var(--red);
+    color: white;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.work {
+    position: relative;
+    overflow: hidden;
+    background: #1b1b1b;
+    cursor: pointer;
+}
+
+.work img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.work:hover img {
+    transform: scale(1.07);
+}
+
+.work-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        transparent 30%,
+        rgba(0,0,0,0.9)
+    );
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 25px;
+
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.work:hover .work-overlay {
+    opacity: 1;
+}
+
+.work-overlay h3 {
+    font-size: 21px;
+}
+
+.work-overlay p {
+    color: #aaa;
+    font-size: 13px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background: var(--dark);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.service {
+    padding: 35px;
+    border: 1px solid var(--border);
+    transition: 0.35s;
+}
+
+.service:hover {
+    border-color: var(--red);
+    transform: translateY(-8px);
+}
+
+.service-number {
+    color: var(--red-light);
+    font-size: 14px;
+}
+
+.service h3 {
+    font-size: 23px;
+    margin: 20px 0 10px;
+}
+
+.service p {
+    color: #888;
+    font-size: 14px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px 70px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.skill-top span:last-child {
+    color: var(--red-light);
+}
+
+.skill-bar {
+    height: 5px;
+    background: #2b2b2b;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: var(--red);
+}
+
+/* =========================
+   INSTAGRAM
+========================= */
+
+.instagram {
+    background: var(--red);
+    text-align: center;
+}
+
+.instagram .section-number {
+    color: #ffd8dc;
+}
+
+.instagram h2 {
+    font-size: clamp(40px,7vw,75px);
+    margin: 10px 0;
+}
+
+.instagram p {
+    max-width: 550px;
+    margin: auto;
+    color: #f7dfe2;
+}
+
+.instagram-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 30px;
+    background: white;
+    color: #6e1825;
+    transition: 0.3s;
+}
+
+.instagram-btn:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: #0d0d0d;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+}
+
+.contact-info h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item small {
+    display: block;
+    color: var(--red-light);
+}
+
+.contact-item span {
+    color: #ccc;
+}
+
+.contact-form {
+    display: grid;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+
+    background: #171717;
+    border: 1px solid var(--border);
+
+    color: white;
+    outline: none;
+
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    height: 160px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--red);
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 30px 7%;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2000;
+    padding: 30px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+.close-modal {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 900px) {
+
+    .nav-links {
+        position: absolute;
+        top: 75px;
+        right: 5%;
+        left: 5%;
+
+        background: #181818;
+        padding: 25px;
+
+        flex-direction: column;
+        gap: 18px;
+
+        display: none;
+        border: 1px solid var(--border);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+
+    section {
+        padding: 80px 5%;
+    }
+
+    header {
+        padding: 17px 5%;
+    }
+
+    .hero {
+        padding: 130px 5% 70px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .work img {
+        height: 430px;
+    }
+
+    .service-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-photo {
+        height: 350px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+<nav class="navbar">
+
+    <a href="#home" class="logo">
+        M<span>.</span>
+    </a>
+
+    <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT ME</a></li>
+        <li><a href="#works">MY WORKS</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#instagram">INSTAGRAM</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+
+    </ul>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+    <div class="hero-text reveal">
+
+        <div class="small-title">
+            GRAPHIC DESIGNER
+        </div>
+
+        <h1>
+            MARYAM<span>.</span>
+        </h1>
+
+        <h2>
+            Creative Designer & Visual Artist
+        </h2>
+
+        <p>
+            من مریم هستم؛ طراح گرافیک و علاقه‌مند به خلق
+            طرح‌هایی که فقط زیبا نیستند، بلکه یک حس و داستان
+            خاص را منتقل می‌کنند.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#works" class="btn btn-primary">
+                مشاهده نمونه‌کارها
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                ارتباط با من
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual reveal">
+
+        <div class="design-card">
+
+            <div class="design-card-content">
+
+                <div class="symbol">✦</div>
+
+                <h3>
+                    MARYAM
+                </h3>
+
+                <p>
+                    DESIGN PORTFOLIO
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT ME
+========================= -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+    <div class="section-head reveal">
+
+        <div class="section-number">
+            01 / ABOUT
+        </div>
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-photo reveal">
+
+            <!--
+            عکس خودت را می‌توانی اینجا قرار بدهی:
+
+            <img src="images/me.jpg">
+            -->
+
+            <span> M </span>
+
+        </div>
+
+
+        <div class="about-text reveal">
+
+            <h3>
+                طراحی برای من فقط یک تصویر نیست.
+            </h3>
+
+            <p>
+                من مریم هستم و به طراحی گرافیک، پوستر،
+                طراحی تبلیغاتی و ساخت ایده‌های بصری علاقه دارم.
+            </p>
+
+            <p>
+                همیشه سعی می‌کنم در طراحی‌هایم ترکیبی از
+                خلاقیت، سادگی و جذابیت بصری وجود داشته باشد.
+            </p>
+
+
+            <div class="about-tags">
+
+                <span class="tag">Creative</span>
+                <span class="tag">Graphic Design</span>
+                <span class="tag">Visual Art</span>
+                <span class="tag">Always Learning</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     MY WORKS
+========================= -->
+
+<section id="works">
+
+<div class="container">
+
+    <div class="section-head reveal">
+
+        <div class="section-number">
+            02 / PORTFOLIO
+        </div>
+
+        <h2 class="section-title">
+            My Works
+        </h2>
+
+        <p class="section-description">
+            مجموعه‌ای از طراحی‌هایی که با ایده، خلاقیت و دقت
+            ساخته‌ام.
+        </p>
+
+    </div>
+
+
+    <!-- FILTERS -->
+
+    <div class="filters reveal">
+
+        <button class="filter-btn active"
+                onclick="filterWorks('all',this)">
+            همه
+        </button>
+
+        <button class="filter-btn"
+                onclick="filterWorks('poster',this)">
+            پوستر
+        </button>
+
+        <button class="filter-btn"
+                onclick="filterWorks('card',this)">
+            کارت ویزیت
+        </button>
+
+        <button class="filter-btn"
+                onclick="filterWorks('social',this)">
+            شبکه اجتماعی
+        </button>
+
+    </div>
+
+
+    <!-- GALLERY -->
+
+    <div class="gallery">
+
+
+        <div class="work poster reveal"
+             onclick="openModal('images/poster1.jpg')">
+
+            <img src="images/poster1.jpg"
+                 alt="Poster Design">
+
+            <div class="work-overlay">
+
+                <div>
+                    <h3>Poster Design</h3>
+                    <p>Creative Poster</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="work poster reveal"
+             onclick="openModal('images/poster2.jpg')">
+
+            <img src="images/poster2.jpg"
+                 alt="Poster Design">
+
+            <div class="work-overlay">
+
+                <div>
+                    <h3>Poster Design</h3>
+                    <p>Visual Design</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="work card reveal"
+             onclick="openModal('images/card1.jpg')">
+
+            <img src="images/card1.jpg"
+                 alt="Business Card">
+
+            <div class="work-overlay">
+
+                <div>
+                    <h3>Business Card</h3>
+                    <p>Brand Identity</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="work social reveal"
+             onclick="openModal('images/social1.jpg')">
+
+            <img src="images/social1.jpg"
+                 alt="Social Media Design">
+
+            <div class="work-overlay">
+
+                <div>
+                    <h3>Social Media</h3>
+                    <p>Instagram Design</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="work poster reveal"
+             onclick="openModal('images/poster3.jpg')">
+
+            <img src="images/poster3.jpg"
+                 alt="Poster Design">
+
+            <div class="work-overlay">
+
+                <div>
+                    <h3>Creative Poster</h3>
+                    <p>Graphic Design</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="work card reveal"
+             onclick="openModal('images/card2.jpg')">
+
+            <img src="images/card2.jpg"
+                 alt="Business Card">
+
+            <div class="work-overlay">
+
+                <div>
+                    <h3>Business Card</h3>
+                    <p>Graphic Design</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+    <div class="section-head reveal">
+
+        <div class="section-number">
+            03 / SERVICES
+        </div>
+
+        <h2 class="section-title">
+            What I Do
+        </h2>
+
+    </div>
+
+
+    <div class="service-grid">
+
+
+        <div class="service reveal">
+
+            <div class="service-number">
+                01
+            </div>
+
+            <h3>
+                Poster Design
+            </h3>
+
+            <p>
+                طراحی پوسترهای تبلیغاتی، مناسبتی،
+                هنری و خلاقانه.
+            </p>
+
+        </div>
+
+
+        <div class="service reveal">
+
+            <div class="service-number">
+                02
+            </div>
+
+            <h3>
+                Business Card
+            </h3>
+
+            <p>
+                طراحی کارت ویزیت حرفه‌ای برای
+                برندها و کسب‌وکارها.
+            </p>
+
+        </div>
+
+
+        <div class="service reveal">
+
+            <div class="service-number">
+                03
+            </div>
+
+            <h3>
+                Social Media
+            </h3>
+
+            <p>
+                طراحی پست، استوری و محتوای بصری
+                برای شبکه‌های اجتماعی.
+            </p>
+
+        </div>
+
+
+        <div class="service reveal">
+
+            <div class="service-number">
+                04
+            </div>
+
+            <h3>
+                Advertising
+            </h3>
+
+            <p>
+                طراحی محتوای تبلیغاتی جذاب برای
+                معرفی محصولات و خدمات.
+            </p>
+
+        </div>
+
+
+        <div class="service reveal">
+
+            <div class="service-number">
+                05
+            </div>
+
+            <h3>
+                Custom Design
+            </h3>
+
+            <p>
+                طراحی اختصاصی بر اساس نیاز و
+                ایده مشتری.
+            </p>
+
+        </div>
+
+
+        <div class="service reveal">
+
+            <div class="service-number">
+                06
+            </div>
+
+            <h3>
+                Creative Ideas
+            </h3>
+
+            <p>
+                تبدیل ایده‌های ساده به طرح‌هایی
+                خلاقانه و چشم‌گیر.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+<div class="container">
+
+    <div class="section-head reveal">
+
+        <div class="section-number">
+            04 / SKILLS
+        </div>
+
+        <h2 class="section-title">
+            My Skills
+        </h2>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+
+        <div class="skill reveal">
+
+            <div class="skill-top">
+
+                <span>Graphic Design</span>
+                <span>90%</span>
+
+            </div>
+
+            <div class="skill-bar">
+                <div class="skill-progress"
+                     style="width:90%">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="skill reveal">
+
+            <div class="skill-top">
+
+                <span>Canva</span>
+                <span>95%</span>
+
+            </div>
+
+            <div class="skill-bar">
+                <div class="skill-progress"
+                     style="width:95%">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="skill reveal">
+
+            <div class="skill-top">
+
+                <span>Poster Design</span>
+                <span>90%</span>
+
+            </div>
+
+            <div class="skill-bar">
+                <div class="skill-progress"
+                     style="width:90%">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="skill reveal">
+
+            <div class="skill-top">
+
+                <span>Typography</span>
+                <span>80%</span>
+
+            </div>
+
+            <div class="skill-bar">
+                <div class="skill-progress"
+                     style="width:80%">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="skill reveal">
+
+            <div class="skill-top">
+
+                <span>Color & Layout</span>
+                <span>85%</span>
+
+            </div>
+
+            <div class="skill-bar">
+                <div class="skill-progress"
+                     style="width:85%">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="skill reveal">
+
+            <div class="skill-top">
+
+                <span>Social Media Design</span>
+                <span>90%</span>
+
+            </div>
+
+            <div class="skill-bar">
+                <div class="skill-progress"
+                     style="width:90%">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     INSTAGRAM
+========================= -->
+
+<section class="instagram" id="instagram">
+
+<div class="container reveal">
+
+    <div class="section-number">
+        05 / INSTAGRAM
+    </div>
+
+    <h2>
+        Let's connect.
+    </h2>
+
+    <p>
+        برای دیدن طراحی‌های بیشتر و دنبال کردن
+        جدیدترین کارهایم می‌توانید من را در اینستاگرام دنبال کنید.
+    </p>
+
+    <!-- آیدی اینستاگرام را اینجا تغییر بده -->
+
+    <a class="instagram-btn"
+       href="https://instagram.com/YOUR_ID"
+       target="_blank">
+
+        @YOUR_ID ↗
+
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+    <div class="section-head reveal">
+
+        <div class="section-number">
+            06 / CONTACT
+        </div>
+
+        <h2 class="section-title">
+            Let's Work Together
+        </h2>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact-info reveal">
+
+            <h3>
+                یک ایده داری؟
+            </h3>
+
+            <p>
+                اگر برای کسب‌وکار، پیج یا پروژه خودت
+                به طراحی نیاز داری، می‌توانی با من در ارتباط باشی.
+            </p>
+
+
+            <div class="contact-item">
+
+                <small>INSTAGRAM</small>
+
+                <span>
+                    @YOUR_ID
+                </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <small>DESIGN</small>
+
+                <span>
+                    Poster • Card • Social Media
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <form class="contact-form reveal"
+              onsubmit="sendMessage(event)">
+
+            <input
+                type="text"
+                placeholder="نام شما"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="ایمیل"
+                required
+            >
+
+            <textarea
+                placeholder="توضیح کوتاهی درباره پروژه..."
+                required
+            ></textarea>
+
+            <button
+                type="submit"
+                class="btn btn-primary">
+
+                ارسال درخواست ↗
+
+            </button>
+
+        </form>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 Maryam — Graphic Designer
+    <br>
+    Designed with creativity ✦
+
+</footer>
+
+
+<!-- =========================
+     IMAGE MODAL
+========================= -->
+
+<div class="modal" id="imageModal">
+
+    <span class="close-modal"
+          onclick="closeModal()">
+        ×
+    </span>
+
+    <img id="modalImage" src="" alt="">
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+function toggleMenu() {
+
+    document
+        .getElementById("navLinks")
+        .classList
+        .toggle("active");
+
+}
+
+
+/* Close mobile menu */
+
+document.querySelectorAll(".nav-links a")
+.forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        document
+            .getElementById("navLinks")
+            .classList
+            .remove("active");
+
+    });
+
+});
+
+
+/* =========================
+   PORTFOLIO FILTER
+========================= */
+
+function filterWorks(category, button) {
+
+    document
+        .querySelectorAll(".filter-btn")
+        .forEach(function(btn) {
+
+            btn.classList.remove("active");
+
+        });
+
+    button.classList.add("active");
+
+
+    document
+        .querySelectorAll(".work")
+        .forEach(function(work) {
+
+            if(category === "all") {
+
+                work.style.display = "block";
+
+            }
+
+            else if(work.classList.contains(category)) {
+
+                work.style.display = "block";
+
+            }
+
+            else {
+
+                work.style.display = "none";
+
+            }
+
+        });
+
+}
+
+
+/* =========================
+   IMAGE MODAL
+========================= */
+
+function openModal(image) {
+
+    document
+        .getElementById("modalImage")
+        .src = image;
+
+    document
+        .getElementById("imageModal")
+        .classList
+        .add("active");
+
+}
+
+
+function closeModal() {
+
+    document
+        .getElementById("imageModal")
+        .classList
+        .remove("active");
+
+}
+
+
+document
+    .getElementById("imageModal")
+    .addEventListener("click", function(e) {
+
+        if(e.target === this) {
+
+            closeModal();
+
+        }
+
+    });
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+function revealOnScroll() {
+
+    const elements =
+        document.querySelectorAll(".reveal");
+
+    elements.forEach(function(element) {
+
+        const position =
+            element.getBoundingClientRect().top;
+
+        if(position < window.innerHeight - 80) {
+
+            element.classList.add("show");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+function sendMessage(event) {
+
+    event.preventDefault();
+
+    alert(
+        "پیام شما ثبت شد! برای فعال شدن ارسال واقعی، فرم باید به یک سرویس ایمیل متصل شود."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
